@@ -1,0 +1,13 @@
+form {
+	
+	flex-direction: column;
+}
+
+.content {
+	width:100px;
+	height:100px;
+}
+.join {
+	width:100px;
+	height:100px;
+}
