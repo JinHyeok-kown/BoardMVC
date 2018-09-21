@@ -1,0 +1,23 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+}
+
+header {
+	display:flex;
+	align-items: center;
+	justify-content: center;	
+	display: 2;
+}
+
+body {
+	diplay: flex;
+	display: 6;
+	
+}
+footer {
+	display:flex;
+	display:2;
+	align-items: center;
+	justify-content: center;
+}

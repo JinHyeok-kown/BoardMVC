@@ -22,10 +22,12 @@ public class BoardListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		forward.setPath(Var.TEMPLATE_1);
-	
+
 		BoardListService service = new BoardListService();
 		int btype = Utils.getParamInt(request.getParameter("btype"));
-		ArrayList<BoardVO> data = service.getBoardList(btype);
+		int page = Utils.getOneParamInt(request.getParameter("page"));
+		
+		ArrayList<BoardVO> data = service.getPage(btype, page);
 		request.setAttribute("title",Var.TITlES[btype]);
 		request.setAttribute("content", "boardList");
 		request.setAttribute("btype",btype);

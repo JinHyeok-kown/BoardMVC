@@ -19,8 +19,10 @@
 <body>
  	
 	<div class="container">
-	
+	<div>
 	<h1>게시판</h1>
+	</div>
+	
 	<%if(result.size()>0) { %>
 		<table>	
 		<thead>
@@ -52,6 +54,9 @@
 	
 	</button>
 </div>
+
+
+
 
 </body>
 </html>

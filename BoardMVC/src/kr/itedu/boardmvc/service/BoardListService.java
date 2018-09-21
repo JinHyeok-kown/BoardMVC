@@ -15,11 +15,11 @@ import kr.itedu.boardmvc.common.Var;
 public class BoardListService {
 	public ArrayList<BoardVO> getBoardList(int btype) {
 		ArrayList<BoardVO> result = null;
-			BoardDAO dao = BoardDAO.getInstance();
-			result = dao.getBoardList(btype);
+		BoardDAO dao = BoardDAO.getInstance();
+		result = dao.getBoardList(btype);
 
 		System.out.printf("btype:%d\n", btype);
-		
+
 		for (BoardVO vo : result) {
 			System.out.printf("bid :%d\n", vo.getBid());
 			System.out.printf("btitle :%s\n", vo.getBtitle());
@@ -28,6 +28,13 @@ public class BoardListService {
 			System.out.println("-------");
 
 		}
+		return result;
+	}
+
+	public ArrayList<BoardVO> getPage(int btype, int page) {
+		ArrayList<BoardVO> result = null;
+		BoardDAO dao = BoardDAO.getInstance();
+		result = dao.getPage(btype, page);
 		return result;
 	}
 }

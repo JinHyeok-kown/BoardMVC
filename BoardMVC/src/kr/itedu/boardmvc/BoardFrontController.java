@@ -22,8 +22,8 @@ public class BoardFrontController extends HttpServlet {
 		String reqURI = request.getRequestURI(); //전체주소
 		String ctxPath = request.getContextPath(); //루트주소값
 		String comd = reqURI.substring(ctxPath.length());
-		ActionForward forward = null;
-		Action action = null;
+		ActionForward forward = null; //변수명만 설정
+		Action action = null; //변수명만 설정 (존재x)
 		
 		
 		if(comd.equals("/boardList.bo")) {
